@@ -12,7 +12,7 @@ EX:                 15
 
 Problem 3(level 2): Given 2 chess positions, find the minimum number of moves by a knight needed to go from 1 position to the other
 
-Problem 4(level 3): Given a matrix representing the probabilities of transitioning from each state to the next, where a row of 0s represents a terminal states, find the exact probability of reaching any terminal state when starting from the first state
+Problem 4(level 3): Given a matrix representing the probabilities of transitioning from each state to the next, where a row of 0s represents a terminal states, find the exact probability of reaching any terminal state when starting from the first state(markov chain as matrix)
 
 Problem 5(level 3): Given an array of positive integers, l, find the number of tuples (l[i], l[j], l[k]) where i < j < k such that l[k] is divisible by l[j] and l[j] is divisible by l[i]
 
@@ -21,7 +21,7 @@ Have every Mach bomb retrieve a sync unit from a Facula bomb, for every Mach bom
 Have every Fach bomb spontaenously create a Mach bomb
 Given 2 targets, x and y, determine the fewest number of steps needed to have x Mach bombs and y Facula bombs if you start with 1 of each, or "impossible" if it is not possible
 
-Problem 7: You need to distract a bunch of bunny trainers. You invite them to play the banana games. You will set up simultaneous thumb wrestling matches. In each match, the 2 bunny trainers will be in a thumb wrestling match. The trainer with fewer bananas will bet all their bananas, and the other trainer will match that bet. However, the trainer with more banans is always overconfident and losese.
+Problem 7(level 4): You need to distract a bunch of bunny trainers. You invite them to play the banana games. You will set up simultaneous thumb wrestling matches. In each match, the 2 bunny trainers will be in a thumb wrestling match. The trainer with fewer bananas will bet all their bananas, and the other trainer will match that bet. However, the trainer with more banans is always overconfident and losese.
 EX: trainer 1: 10 bananas, trainer 2: 15 bananas
 EX: trainer 2 loses 10 bananas, trainer 1 gains 10 bananas
 EX: trainer 1: 20 bananas, trainer 2: 5 bananas
@@ -29,3 +29,7 @@ The trainers keep playing until they have the same amount of bananas. Some combi
 Your goal is to maximize the number of trainers that are stuck in an infinite loop.
 Given an array of size n where the ith entry indicates that bunny trainer i has array[i] bananas, find the most trainers that will not be stuck in an infinite loop (This is equivalent to finding n - (the maximum number of trainers stuck in an infinite loop))
 The number of trainers is between 1 and 100, and the number of bananas for each trainer is between 1 and (2^30 - 1).
+
+Problem 8(level 4): You are trying to escape with the bunnies, but some bunnies are weakened by many long work shifts and cannot run very fast. The escape would be much faster if you help to carry the bunnies to the exit.
+The time it takes for you to move from the start position to each bunny and to the exit door(bulkhead) is given as a matrix of integers. The current time to bulkhead close is given as an integer. The bulkhead closes when the time goes below zero, but will reopen if the time goes back to zero or above. Some paths gain reach checkpoints that gain time, indicated by a negative integer.
+Your goal is to find the most number of bunnies you can save before the door closes. Given a matrix and a starting time, return an the longest array of bunnies you can save. Index 0 represents the starting position, 1 .. n-2 represent 0 .. n-3 bunnies, and n-1 represents the door. If there are multiple sets of bunnies you can save with the same length, return the one that is lowest.
